@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">AppFarmaciaPopular</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_sobre_fragment">Sobre</string>
+    <string name="sobre1_fragment">Este aplicativo foi desenvolvido para facilitar a busca de estabelecimentos
+        próximos, que sejam conveniados ao programa do Governo Federal: Aqui tem farmácia popular.
+    </string>
+    <string name="sobre2_fragment">Além disso, ele permite a visualização de mendicamentos distribuídos pelo
+        programa, informa como utilizar o serviço e permite realizar chamadas de voz para a ouvidoria do SUS.
+    </string>
+
+    <string name="title_medicamentos_fragment">Medicamentos</string>
+
+    <string name="title_farmacias_proximas_fragment">Farmácias Próximas</string>
+    <string name="buttom_atualizar">Atualizar</string>
+
+    <string name="title_como_adquirir_fragment">Como Adquirir</string>
+    <string name="adquirir1_fragment">1 - Verifique se o medicamento desejado é distribuído pelo programa.</string>
+    <string name="adquirir2_fragment">2 - Tenha o Cartão Nacional de Saúde (CNS) em mãos. Contudo,
+        o Ministério da Saúde reforça que, mesmo sem o cartão, o paciente pode ter acesso aos remédios.
+    </string>
+    <string name="adquirir3_fragment">3 - Compareça até a farmácia do Centro de Saúde mais próximo com o CNS,
+        documento de identificação e a receita médica (SUS ou particular) e solicite a medicação.
+        Pode ser retirada pelo usuário ou responsável legal (com apresentação da carteira de identidade).
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_medicamento_info_fragment">Informações</string>
+    <string name="nome_medicamento_info_fragment">Nome Medicamento: Medicamento </string>
+    <string name="indicacao_medicamento_info_fragment">Indicação: Ex: Diabetes, Rinite</string>
+    <string name="diposnibilidade_medicamento_info_fragment">Disponibilidade: Ex: Gratuito, Desconto</string>
+</resources>

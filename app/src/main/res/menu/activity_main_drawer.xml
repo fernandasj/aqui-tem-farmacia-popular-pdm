@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_farmacias"
+            android:icon="@drawable/ic_menu_mark"
+            android:title="Farmácias Próximas" />
+        <item
+            android:id="@+id/nav_medicamentos"
+            android:icon="@drawable/ic_menu_pill"
+            android:title="Medicamentos" />
+        <item
+            android:id="@+id/nav_ouvidoria"
+            android:icon="@drawable/ic_menu_phone"
+            android:title="Ouvidoria SUS" />
+
+        <item
+            android:id="@+id/nav_adquirir"
+            android:icon="@drawable/ic_menu_tag"
+            android:title="Como adquirir" />
+        <item
+            android:id="@+id/nav_sobre"
+            android:icon="@drawable/ic_menu_info"
+            android:title="Sobre" />
+    </group>
+
+</menu>
