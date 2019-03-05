@@ -107,10 +107,10 @@ public class MainActivity extends AppCompatActivity
                     .commit();
 
         } else if (id == R.id.nav_ouvidoria) {
-//            String numero = "136";
-//            Uri uri = Uri.parse("tel:" + numero);
-//            Intent intent = new Intent(Intent.ACTION_CALL, uri);
-//            startActivity(intent);
+            String numero = "136";
+            Uri uri = Uri.parse("tel:" + numero);
+            Intent intent = new Intent(Intent.ACTION_CALL, uri);
+            startActivity(intent);
             Toast.makeText(this, "Realizando chamada de voz", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_adquirir) {
