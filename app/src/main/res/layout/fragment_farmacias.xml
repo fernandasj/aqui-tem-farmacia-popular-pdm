@@ -2,8 +2,16 @@
 <android.support.constraint.ConstraintLayout     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:id="@+id/map_farma"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="385dp"
+    android:layout_height="389dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.36"
     tools:context=".FarmaciasFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -42,17 +50,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.206" />
 
-    <ImageView
-        android:id="@+id/map"
-        android:layout_width="385dp"
-        android:layout_height="389dp"
-        android:src="@drawable/google_maps"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.36" />
+    <!--<ImageView-->
+        <!--android:id="@+id/map"-->
+        <!--android:layout_width="385dp"-->
+        <!--android:layout_height="389dp"-->
+        <!--android:src="@drawable/google_maps"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.0"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:layout_constraintVertical_bias="0.36" />-->
 
     <Button
         android:id="@+id/button_atualizar"

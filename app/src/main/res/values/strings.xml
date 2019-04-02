@@ -36,4 +36,6 @@
     <string name="nome_medicamento_info_fragment">Nome Medicamento: Medicamento </string>
     <string name="indicacao_medicamento_info_fragment">Indicação: Ex: Diabetes, Rinite</string>
     <string name="diposnibilidade_medicamento_info_fragment">Disponibilidade: Ex: Gratuito, Desconto</string>
+    <string name="title_activity_map_farmacias">Map</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
