@@ -3,9 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/map_farma"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
-    android:layout_width="385dp"
-    android:layout_height="389dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.0"
@@ -13,6 +12,13 @@
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintVertical_bias="0.36"
     tools:context=".FarmaciasFragment">
+<!--android:name="com.google.android.gms.maps.SupportMapFragment"-->
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportMapFragment" />
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -62,24 +68,24 @@
         <!--app:layout_constraintTop_toTopOf="parent"-->
         <!--app:layout_constraintVertical_bias="0.36" />-->
 
-    <Button
-        android:id="@+id/button_atualizar"
-        android:layout_width="214dp"
-        android:layout_height="44dp"
-        android:layout_marginBottom="4dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="3dp"
-        android:background="@color/colorAccent"
-        android:text="@string/buttom_atualizar"
-        android:textStyle="bold"
-        android:textSize="@dimen/title_buttom"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/map"
-        app:layout_constraintVertical_bias="0.454" />
+    <!--<Button-->
+        <!--android:id="@+id/button_atualizar"-->
+        <!--android:layout_width="214dp"-->
+        <!--android:layout_height="44dp"-->
+        <!--android:layout_marginBottom="4dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginTop="3dp"-->
+        <!--android:background="@color/colorAccent"-->
+        <!--android:text="@string/buttom_atualizar"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textSize="@dimen/title_buttom"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.502"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/map"-->
+        <!--app:layout_constraintVertical_bias="0.454" />-->
 
 
 </android.support.constraint.ConstraintLayout>
