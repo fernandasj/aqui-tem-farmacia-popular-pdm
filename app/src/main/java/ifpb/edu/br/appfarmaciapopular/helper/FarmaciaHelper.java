@@ -7,7 +7,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.Nullable;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import ifpb.edu.br.appfarmaciapopular.model.Farmacia;
+import ifpb.edu.br.appfarmaciapopular.model.FarmaciaMarker;
 
 public class FarmaciaHelper extends SQLiteOpenHelper {
 
@@ -98,5 +102,26 @@ public class FarmaciaHelper extends SQLiteOpenHelper {
         Integer count = cursor.getInt(0);
         cursor.close();
         return count;
+    }
+
+    public List<FarmaciaMarker> findAllFarmaciaMarkers() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT id, latitude, longitude, endereco, nome FROM " + TABLE_NAME, null);
+        List<FarmaciaMarker> farmaciaMarkerList = new ArrayList<>();
+        cursor.moveToFirst();
+
+        while (!cursor.isAfterLast()) {
+            FarmaciaMarker farmaciaMarker = new FarmaciaMarker();
+            farmaciaMarker.setId(cursor.getInt(0));
+            farmaciaMarker.setLatitude(cursor.getString(1));
+            farmaciaMarker.setLongitude(cursor.getString(2));
+            farmaciaMarker.setEndereco(cursor.getString(3));
+            farmaciaMarker.setNome(cursor.getString(4));
+            farmaciaMarkerList.add(farmaciaMarker);
+
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return farmaciaMarkerList;
     }
 }

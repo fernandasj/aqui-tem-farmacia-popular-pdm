@@ -13,7 +13,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -57,7 +56,7 @@ public class MedicamentosFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 getFragmentManager()
-                        .beginTransaction().replace(R.id.fragment,  new MedicamentoInfoFragment())
+                        .beginTransaction().replace(R.id.fragment, new MedicamentoInfoFragment())
                         .addToBackStack(null)
                         .commit();
             }

@@ -2,10 +2,11 @@ package ifpb.edu.br.appfarmaciapopular;
 
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,12 +14,15 @@ import android.view.ViewGroup;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
-import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.util.List;
+
+import ifpb.edu.br.appfarmaciapopular.adapter.FarmaciaAdapter;
+import ifpb.edu.br.appfarmaciapopular.model.FarmaciaMarker;
 
 
 /**
@@ -50,11 +54,27 @@ public class FarmaciasFragment extends Fragment implements OnMapReadyCallback {
         this.mMap = gMap;
         SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(googleMap -> {
-            LatLng sydney = new LatLng(-6.8729551,-38.5609062);
-            mMap.addMarker(new MarkerOptions().position(sydney).title("Marker Title").snippet("Marker Description"));
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
             mMap.setMyLocationEnabled(true);
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 17));
+            LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+            Location getLastLocation = locationManager.getLastKnownLocation(LocationManager.PASSIVE_PROVIDER);
+            Double currentLongitude = getLastLocation.getLongitude();
+            Double currentLatitude = getLastLocation.getLatitude();
+            LatLng myLocation = new LatLng(currentLatitude, currentLongitude);
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(myLocation, 12));
+
+            List<FarmaciaMarker> markers = nearbyFarmaciaMarkers(myLocation);
+
+            for (FarmaciaMarker marker : markers) {
+                LatLng latLng = new LatLng(marker.getLat(), marker.getLng());
+                mMap.addMarker(new MarkerOptions().position(latLng).title(marker.getNome()));
+            }
+
         });
     }
+
+    public List<FarmaciaMarker> nearbyFarmaciaMarkers(LatLng myLocation) {
+        FarmaciaAdapter adapter = new FarmaciaAdapter(this.getContext());
+        return adapter.nearby(myLocation);
+    }
+
 }

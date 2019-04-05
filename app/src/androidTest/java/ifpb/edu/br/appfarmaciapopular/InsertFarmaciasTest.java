@@ -7,14 +7,9 @@ import android.support.test.runner.AndroidJUnit4;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import java.util.List;
-
 import ifpb.edu.br.appfarmaciapopular.helper.FarmaciaHelper;
-import ifpb.edu.br.appfarmaciapopular.model.Farmacia;
-import ifpb.edu.br.appfarmaciapopular.services.RedeConveniadaService;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
 
 /**
  * Instrumented test, which will execute on an Android device.

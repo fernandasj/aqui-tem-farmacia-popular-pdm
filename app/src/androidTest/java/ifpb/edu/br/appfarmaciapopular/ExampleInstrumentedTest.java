@@ -1,21 +1,18 @@
 package ifpb.edu.br.appfarmaciapopular;
 
 import android.content.Context;
-import android.os.AsyncTask;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import ifpb.edu.br.appfarmaciapopular.model.Farmacia;
-import ifpb.edu.br.appfarmaciapopular.services.DatabaseTask;
 import ifpb.edu.br.appfarmaciapopular.services.RedeConveniadaService;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotEquals;
 
 /**
  * Instrumented test, which will execute on an Android device.

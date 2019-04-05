@@ -12,7 +12,7 @@ public class Medicamento {
         this.disponibilidade = line[2];
     }
 
-    public Medicamento(){
+    public Medicamento() {
     }
 
     public Integer getId() {
