@@ -66,7 +66,8 @@ public class FarmaciasFragment extends Fragment implements OnMapReadyCallback {
 
             for (FarmaciaMarker marker : markers) {
                 LatLng latLng = new LatLng(marker.getLat(), marker.getLng());
-                mMap.addMarker(new MarkerOptions().position(latLng).title(marker.getNome()));
+                mMap.addMarker(new MarkerOptions().position(latLng).title(" " + marker.getNome() +
+                        "  " + marker.getEndereco()));
             }
 
         });
